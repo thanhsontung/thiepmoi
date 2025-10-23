@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<html lang="vi">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cảm Ơn - Thiệp Mời Đám Cưới</title>
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&family=Great+Vibes&family=Montserrat:wght@300;400;600&display=swap"
+        rel="stylesheet">
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Montserrat', sans-serif;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: #333;
+            margin: 0;
+            padding: 20px;
+            min-height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .container {
+            max-width: 600px;
+            background: white;
+            padding: 50px;
+            border-radius: 30px;
+            box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
+            text-align: center;
+            animation: slideIn 0.6s ease-out;
+        }
+
+        @keyframes slideIn {
+            from {
+                opacity: 0;
+                transform: translateY(-50px) scale(0.9);
+            }
+
+            to {
+                opacity: 1;
+                transform: translateY(0) scale(1);
+            }
+        }
+
+        .success-icon {
+            font-size: 100px;
+            margin-bottom: 30px;
+            animation: bounce 1s ease infinite;
+        }
+
+        @keyframes bounce {
+
+            0%,
+            100% {
+                transform: translateY(0);
+            }
+
+            50% {
+                transform: translateY(-20px);
+            }
+        }
+
+        h1 {
+            font-family: 'Playfair Display', serif;
+            color: #8B0000;
+            margin-bottom: 30px;
+            font-size: 42px;
+            font-weight: 700;
+        }
+
+        .guest-name {
+            font-family: 'Great Vibes', cursive;
+            color: #667eea;
+            font-size: 36px;
+            font-weight: normal;
+            margin: 30px 0;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1);
+        }
+
+        p {
+            line-height: 1.9;
+            color: #555;
+            font-size: 18px;
+            margin: 20px 0;
+            font-weight: 300;
+        }
+
+        .hearts {
+            font-size: 32px;
+            margin: 30px 0;
+            animation: heartPulse 2s ease infinite;
+        }
+
+        @keyframes heartPulse {
+
+            0%,
+            100% {
+                transform: scale(1);
+            }
+
+            50% {
+                transform: scale(1.1);
+            }
+        }
+
+        .back-button {
+            display: inline-block;
+            margin-top: 40px;
+            padding: 15px 40px;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            text-decoration: none;
+            border-radius: 50px;
+            transition: all 0.3s;
+            font-size: 16px;
+            font-weight: 600;
+            letter-spacing: 1px;
+            box-shadow: 0 10px 30px rgba(102, 126, 234, 0.3);
+        }
+
+        .back-button:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 15px 40px rgba(102, 126, 234, 0.4);
+        }
+
+        .divider {
+            margin: 40px 0;
+            border: 0;
+            border-top: 2px solid #f0f0f0;
+        }
+
+        .footer-text {
+            font-family: 'Playfair Display', serif;
+            font-size: 18px;
+            color: #999;
+            font-weight: 400;
+        }
+
+        /* Confetti Animation */
+        .confetti {
+            position: fixed;
+            width: 10px;
+            height: 10px;
+            background: #f5576c;
+            position: absolute;
+            animation: confetti-fall 3s linear infinite;
+        }
+
+        @keyframes confetti-fall {
+            to {
+                transform: translateY(100vh) rotate(360deg);
+                opacity: 0;
+            }
+        }
+
+        @media (max-width: 768px) {
+            .container {
+                padding: 30px;
+                margin: 10px;
+            }
+
+            h1 {
+                font-size: 32px;
+            }
+
+            .guest-name {
+                font-size: 28px;
+            }
+
+            .success-icon {
+                font-size: 80px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <div class="success-icon">✓</div>
+
+        <h1>CẢM ƠN BẠN!</h1>
+
+        <p class="guest-name" id="guestName">Bạn</p>
+
+        <div class="hearts">💖 💝 💖</div>
+
+        <p>Chúng tôi rất vui và cảm kích vì bạn đã dành thời gian gửi lời chúc!</p>
+
+        <p>Phản hồi của bạn đã được ghi nhận thành công.</p>
+
+        <p>Chúng tôi rất mong được gặp bạn trong ngày trọng đại của chúng tôi!</p>
+
+        <hr class="divider">
+
+        <p class="footer-text">
+            Cô Dâu A & Chú Rể B
+        </p>
+
+        <a href="/" class="back-button">← Quay lại trang chủ</a>
+    </div>
+
+    <script>
+        // Get guest name from URL query parameter
+        const urlParams = new URLSearchParams(window.location.search);
+        const guestName = urlParams.get('name');
+
+        if (guestName) {
+            document.getElementById('guestName').textContent = decodeURIComponent(guestName);
+        }
+
+        // Create confetti effect
+        function createConfetti() {
+            const colors = ['#f5576c', '#f093fb', '#667eea', '#ffc107', '#4caf50'];
+            for (let i = 0; i < 50; i++) {
+                setTimeout(() => {
+                    const confetti = document.createElement('div');
+                    confetti.className = 'confetti';
+                    confetti.style.left = Math.random() * 100 + '%';
+                    confetti.style.background = colors[Math.floor(Math.random() * colors.length)];
+                    confetti.style.animationDelay = Math.random() * 3 + 's';
+                    confetti.style.animationDuration = (Math.random() * 2 + 3) + 's';
+                    document.body.appendChild(confetti);
+
+                    setTimeout(() => {
+                        confetti.remove();
+                    }, 5000);
+                }, i * 30);
+            }
+        }
+
+        // Run confetti on page load
+        createConfetti();
+    </script>
+</body>
+
+</html>
