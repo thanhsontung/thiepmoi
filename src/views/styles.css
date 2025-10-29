@@ -1,0 +1,60 @@
+/* Form styling */
+.form-row {
+    margin-bottom: 15px;
+    display: flex;
+    flex-direction: column;
+}
+
+.form-row label {
+    margin-bottom: 5px;
+    font-size: 14px;
+    font-weight: 500;
+    color: #333;
+}
+
+.form-row input,
+.form-row select,
+.form-row textarea {
+    padding: 8px 12px;
+    border: 2px solid #d1d5db;
+    border-radius: 6px;
+    font-size: 14px;
+    transition: all 0.3s ease;
+}
+
+.form-row input:focus,
+.form-row select:focus,
+.form-row textarea:focus {
+    outline: none;
+    border-color: #900303;
+    box-shadow: 0 0 0 2px rgba(144, 3, 3, 0.1);
+}
+
+.form-row button {
+    background-color: #900303;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 6px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.form-row button:hover {
+    background-color: #700202;
+    transform: translateY(-1px);
+}
+
+.form-row button:active {
+    transform: translateY(1px);
+}
+
+#rsvpForm {
+    max-width: 500px;
+    margin: 0 auto;
+    padding: 20px;
+    background: rgba(255, 255, 255, 0.95);
+    border-radius: 12px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}

@@ -4,8 +4,10 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
-  },
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "nodemon server.js"
+   
+  }, 
   "keywords": [],
   "author": "",
   "license": "ISC",
@@ -15,5 +17,8 @@
     "ejs": "^3.1.10",
     "express": "^5.1.0",
     "mongoose": "^8.19.2"
+  },
+  "devDependencies": {
+    "nodemon": "^3.1.10"
   }
 }

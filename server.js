@@ -28,7 +28,7 @@ connectDB();
 
 // Route trang chủ - hiển thị thiệp mời (HTML tĩnh)
 app.get('/', (req, res) => {
-    res.sendFile(path.join(__dirname, 'src/views', 'index.html'));
+    res.sendFile(path.join(__dirname, 'src/views', 'indexthief.html'));
 });
 
 // Route trang cảm ơn (HTML tĩnh - tên khách được truyền qua query param)

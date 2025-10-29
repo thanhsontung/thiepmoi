@@ -1,0 +1,198 @@
+.ladi-container {
+    position: relative;
+    padding: 40px 20px;
+}
+
+#GROUP66 {
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+.ladi-headline {
+    font-family: 'Montserrat', sans-serif;
+    color: #a6373c;
+    margin: 0;
+    padding: 0;
+}
+
+#HEADLINE235 .ladi-headline {
+    font-size: 32px;
+    font-weight: 700;
+    margin-bottom: 10px;
+}
+
+#HEADLINE236 .ladi-headline {
+    font-size: 24px;
+    color: #e8dbb5;
+    letter-spacing: 3px;
+    margin-bottom: 30px;
+}
+
+#rsvpFormContainer {
+    max-width: 600px;
+    margin: 0 auto;
+    padding: 30px;
+    background: rgba(255, 255, 255, 0.95);
+    border-radius: 15px;
+    box-shadow: 0 4px 20px rgba(166, 55, 54, 0.1);
+}
+
+#rsvpForm {
+    width: 100%;
+}
+
+.form-row {
+    margin-bottom: 25px;
+}
+
+.form-row label {
+    display: block;
+    margin-bottom: 10px;
+    font-size: 16px;
+    color: #a6373c;
+    font-weight: 600;
+    font-family: 'Montserrat', sans-serif;
+}
+
+.form-row input,
+.form-row select,
+.form-row textarea {
+    width: 100%;
+    padding: 12px 15px;
+    border: 2px solid #e8dbb5;
+    border-radius: 8px;
+    font-size: 16px;
+    color: #333;
+    background: white;
+    transition: all 0.3s ease;
+    font-family: 'Montserrat', sans-serif;
+}
+
+.form-row input:focus,
+.form-row select:focus,
+.form-row textarea:focus {
+    border-color: #a6373c;
+    outline: none;
+    box-shadow: 0 0 0 3px rgba(166, 55, 54, 0.1);
+}
+
+.form-row textarea {
+    min-height: 120px;
+    resize: vertical;
+}
+
+.form-row button.primary {
+    background: linear-gradient(to right bottom, #a6373c, #8a2e32);
+    color: white;
+    padding: 15px 30px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 18px;
+    font-weight: 600;
+    width: 100%;
+    transition: all 0.3s ease;
+    font-family: 'Montserrat', sans-serif;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    position: relative;
+    overflow: hidden;
+}
+
+.form-row button.primary:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(166, 55, 54, 0.3);
+}
+
+.form-row button.primary:active {
+    transform: translateY(0);
+}
+
+#HEADLINE245 {
+    text-align: center;
+    margin-top: 40px;
+}
+
+#HEADLINE245 .ladi-headline {
+    font-size: 24px;
+    color: #a6373c;
+    font-weight: 600;
+    line-height: 1.5;
+}
+
+/* Thêm hiệu ứng hover cho input và select */
+.form-row input:hover,
+.form-row select:hover,
+.form-row textarea:hover {
+    border-color: #a6373c;
+}
+
+/* Style cho placeholder */
+::placeholder {
+    color: #999;
+    opacity: 0.7;
+}
+
+/* Custom style cho select */
+select {
+    appearance: none;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='12' viewBox='0 0 12 12'%3E%3Cpath fill='%23a6373c' d='M6 8L1 3h10z'/%3E%3C/svg%3E");
+    background-repeat: no-repeat;
+    background-position: right 15px center;
+    padding-right: 40px !important;
+}
+
+/* Animation khi load form */
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+#rsvpFormContainer {
+    animation: fadeInUp 0.6s ease-out;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .ladi-container {
+        padding: 20px 15px;
+    }
+
+    #HEADLINE235 .ladi-headline {
+        font-size: 28px;
+    }
+
+    #HEADLINE236 .ladi-headline {
+        font-size: 20px;
+    }
+
+    #rsvpFormContainer {
+        padding: 20px;
+    }
+
+    .form-row {
+        margin-bottom: 20px;
+    }
+
+    .form-row label {
+        font-size: 15px;
+    }
+
+    .form-row input,
+    .form-row select,
+    .form-row textarea {
+        font-size: 15px;
+        padding: 10px 12px;
+    }
+
+    .form-row button.primary {
+        font-size: 16px;
+        padding: 12px 25px;
+    }
+}
